@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="/admin">ADMIN</a>
+    <a href="/">Home</a>
+    <form method="post" action="/admin">
+        <input name="title"/>
+        <textarea name="extra"></textarea>
+        <input name="link"/>
+        <button>ADD RESOURCE</button>
+    </form>
+
+    <% factList.forEach(fact => { %>
+        <form action="admin/delete" method="POST">
+        <p><%= fact.title %></p>
+        <p><%= fact.extra %></p>
+        <p><%= fact.link %></p>
+        <p><%= fact._id%></p>
+        <button type="submit" name="deleteBtn" value="<%=fact._id%>">DELETE</button>
+        <button type="submit" name="editBtn" value="<%=fact._id%>" formmethod="get" formaction="/edit/<%=fact._id%>">EDIT</button>
+        </form>
+    <%})%>
+</body>
+</html>

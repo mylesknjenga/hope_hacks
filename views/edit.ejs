@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   
+    <a href="/admin">ADMIN</a>
+        <p><%= factInfo[1] %></p>
+        <p><%= factInfo[2] %></p>
+        <p><%= factInfo[3] %></p>
+
+    <form method="post" action="/admin/edit">
+        <input name="title"/>
+        <textarea name="extra"></textarea>
+        <input name="link"/>
+        <button type="submit" name="editBtn" value="<%=factInfo[0]%>">UPDATE</button>
+        
+    </form>
+</body>
+</html>
+
