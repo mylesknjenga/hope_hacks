@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="/css/styles.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+</head>
+<body>
+    
+    <section class="header">
+        <nav>LOGO</h1>
+            <!-- <a href="index.html"><img src= "logo.png" </a> -->
+            <section class="nav-links" id="navLinks">
+                <i class="fa-regular fa-xmark" onclick="hideMenu()"></i>
+                 <ul>
+                    <li><a href="/">HOME</a></li>
+                    <li><a href="/resources">RESOURCES</a></li>
+                    <li><a href="#">WEATHER</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+            </section>
+            
+            <i class="fa-solid fa-bars" onclick="showMenu()"></i>
+         </nav>
+
+    
+
+         <section class="text-box">
+            <section class="background">
+              <section class="transbox">
+        
+            <h2>Hopehacks</h2>
+            <p>Intro to our topic and our WHY. <br> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi eveniet nulla pariatur molestias quae? Dolorum voluptatibus obcaecati earum optio consequatur placeat quos aut, quis laboriosam totam, aspernatur ipsa eius eligendi.</p>
+            <a href="products.html" class="btn">Browse</a>
+              </section>
+            </section>  
+        </section>
+        </section>
+
+        <footer>
+            <div class="social-media">
+                <h2 class="footer-logo">LOGO</h2>
+                <a href="#" class="fa fa-facebook"></a>
+                <a href="#" class="fa fa-twitter"></a>
+                <a href="#" class="fa fa-youtube"></a>
+                <a href="#" class="fa fa-instagram"></a>
+            </div>
+            <ul class="footer-menu">
+                <li>HOME</li>
+                <li>PAGE</li>
+                <li>PAGE</li>
+                <li>CONTACT</li>
+            </ul>
+            <ul class="footer-menu">
+                <li>Address: 4 Privet Drive, Little Whinging, Surrey</li>
+                <li>Phone: +1(203)789-1899</li>
+                <li>Email: hopehacks@gmail.com</li>
+            </ul>
+        </footer>
+        <div class="credit">Designed by group 10</div>
+
+            <script>
+                var navLinks = document.getElementById('navLinks');
+                function showMenu(){
+                    navLinks.style.right = "0";
+                }
+                function hideMenu(){
+                    navLinks.style.right = "-200px";
+                } 
+                </script>
+
+</body>
+</html>
