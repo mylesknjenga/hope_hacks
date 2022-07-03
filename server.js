@@ -33,6 +33,10 @@ app.get('/resources', (req, res) => {
     })
 });
 
+app.get('/weather', (req, res) => {
+    res.render('weather')
+});
+
 app.get('/admin', (req, res) => {
 
     Fact.find({}, (err, facts) => {
