@@ -4,17 +4,64 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link href="/css/resources.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;500&display=swap" rel="stylesheet">
+    <title>Resources</title>
 </head>
 <body>
-    <a href="/admin">ADMIN</a>
-    <a href="/">Home</a>
-    <% factList.forEach(fact => { %>
-        <p><%= fact.title %></p>
-        <p><%= fact.extra %></p>
-        <p><%= fact.link %></p>
-        <p><%= fact._id%></p>
-        <a href="<%= fact.link %>">LEARN MORE</a>
-    <%})%>
+    <section class="header">
+        <div class="logo">LOGO</div>
+        <nav>
+            <ul class="navbar-links">
+                <li class="link">
+                    <a href="/">HOME</a>
+                </li>
+                <li class="link">
+                    <a href="/resources">RESOURCES</a>
+                </li>
+                <li class="link">
+                    <a href="/weather">WEATHER CHECK</a>
+                </li>
+                <li class="link">
+                    <a href="/contact">CONTACT</a>
+                </li>
+                <li class="link">
+                    <a href="/admin">ADMIN</a>
+                </li>
+            </ul>
+        </nav>
+    </section>
+   
+    <div class="fact-list">
+        <% factList.forEach(fact => { %>
+            <div class="fact-card">
+                <h2><%= fact.title %></h2>
+                <p><%= fact.extra %></p>
+                <a href="<%= fact.link %>" target="_blank">LEARN MORE</a>
+            </div>
+        <%})%>
+    </div>
+
+    <footer>
+        <div class="social-media">
+            <h2 class="footer-logo">LOGO</h2>
+            <a href="#" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-twitter"></a>
+            <a href="#" class="fa fa-youtube"></a>
+            <a href="#" class="fa fa-instagram"></a>
+        </div>
+        <ul class="footer-menu">
+            <li>HOME</li>
+            <li>PAGE</li>
+            <li>PAGE</li>
+            <li>CONTACT</li>
+        </ul>
+        <ul class="footer-menu">
+            <li>Address: 4 Privet Drive, Little Whinging, Surrey</li>
+            <li>Phone: +1(203)789-1899</li>
+            <li>Email: hopehacks@gmail.com</li>
+        </ul>
+    </footer>
+    
 </body> 
 </html>

@@ -4,27 +4,56 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link href="/css/admin.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;500&display=swap" rel="stylesheet">
+    <title>Admin</title>
 </head>
 <body>
-    <a href="/admin">ADMIN</a>
-    <a href="/">Home</a>
-    <form method="post" action="/admin">
-        <input name="title"/>
-        <textarea name="extra"></textarea>
-        <input name="link"/>
-        <button>ADD RESOURCE</button>
-    </form>
+    <section class="header">
+        <div class="logo">LOGO</div>
+        <nav>
+            <ul class="navbar-links">
+                <li class="link">
+                    <a href="/">HOME</a>
+                </li>
+                <li class="link">
+                    <a href="/resources">RESOURCES</a>
+                </li>
+                <li class="link">
+                    <a href="/weather">WEATHER CHECK</a>
+                </li>
+                <li class="link">
+                    <a href="/contact">CONTACT</a>
+                </li>
+                <li class="link">
+                    <a href="/admin">ADMIN</a>
+                </li>
+            </ul>
+        </nav>
+    </section>
 
-    <% factList.forEach(fact => { %>
-        <form action="admin/delete" method="POST">
-        <p><%= fact.title %></p>
-        <p><%= fact.extra %></p>
-        <p><%= fact.link %></p>
-        <p><%= fact._id%></p>
-        <button type="submit" name="deleteBtn" value="<%=fact._id%>">DELETE</button>
-        <button type="submit" name="editBtn" value="<%=fact._id%>" formmethod="get" formaction="/edit/<%=fact._id%>">EDIT</button>
+    <section class="form-section">
+        <h2 class="form-section-title">Add Resource</h2>
+        <form method="post" action="/admin">
+            <input type="text" name="title" placeholder="Enter Resource Title"/>
+            <input type="text" name="extra" placeholder="Enter Resource Description"></input>
+            <input type="text" name="link" placeholder="Enter Link"/>
+            <button class="btn">ADD RESOURCE</button>
         </form>
-    <%})%>
+    </section>
+
+    <section class="fact-list">
+        <h2 class="fact-list-title">Current Resources</h2>
+        <% factList.forEach(fact => { %>
+            <div class="fact-card">
+                <form action="admin/delete" method="POST">
+                <h2><%= fact.title %></h2>
+                <p><%= fact.extra %></p>
+                <button type="submit" name="deleteBtn" value="<%=fact._id%>" class="btn">DELETE</button>
+                <button type="submit" name="editBtn" value="<%=fact._id%>" formmethod="get" formaction="/edit/<%=fact._id%>" class="btn">EDIT</button>
+                </form>
+            </div>
+        <%})%>
+    </section>
 </body>
 </html>

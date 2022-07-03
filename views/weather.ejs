@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="/css/edit.css" rel="stylesheet">
+    <link href="/css/weather.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;500&display=swap" rel="stylesheet">
+    <title>Weather API</title>
 </head>
 <body>
     <section class="header">
@@ -30,25 +31,28 @@
             </ul>
         </nav>
     </section>
-   
-    <section class="fact-list">
-        <h2 class="fact-list-title">Resource to update</h2>
-            <div class="fact-card">
-                <h2><%= factInfo[1] %></h2>
-                <p><%= factInfo[2] %></p>
-                <p><a href="<%= factInfo[3] %>"><%= factInfo[3] %></a></p>
-            </div>
-    </section>
 
-    <section class="form-section">
-        <form method="post" action="/admin/edit">
-            <input type="text" name="title" placeholder="Enter Updated Title"/>
-            <input type="text" name="extra" placeholder="Enter Updated Description"></input>
-            <input type="text" name="link" placeholder="Enter Updated Link"/>
-            <button type="submit" name="editBtn" value="<%=factInfo[0]%>" class="btn">UPDATE</button>
-        </form>
-    </section>
+
+    <footer>
+        <div class="social-media">
+            <h2 class="footer-logo">LOGO</h2>
+            <a href="#" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-twitter"></a>
+            <a href="#" class="fa fa-youtube"></a>
+            <a href="#" class="fa fa-instagram"></a>
+        </div>
+        <ul class="footer-menu">
+            <li>HOME</li>
+            <li>PAGE</li>
+            <li>PAGE</li>
+            <li>CONTACT</li>
+        </ul>
+        <ul class="footer-menu">
+            <li>Address: 4 Privet Drive, Little Whinging, Surrey</li>
+            <li>Phone: +1(203)789-1899</li>
+            <li>Email: hopehacks@gmail.com</li>
+        </ul>
+    </footer>
     
-</body>
+</body> 
 </html>
-
