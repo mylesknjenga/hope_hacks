@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="/css/resources.css" rel="stylesheet">
+    <link href="/css/contact.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>Resources</title>
+    <title>Contact Us</title>
 </head>
 <body>
     <section class="header">
@@ -33,18 +33,18 @@
             </ul>
         </nav>
     </section>
-   
-    <div class="fact-list">
-        <% factList.forEach(fact => { %>
-            <div class="fact-card">
-                <h2><%= fact.title %></h2>
-                <p><%= fact.extra %></p>
-                <a href="<%= fact.link %>" target="_blank">LEARN MORE</a>
-            </div>
-        <%})%>
-    </div>
 
-    <footer>
+    <article>
+        <h3>Contact Us </h3>
+        <form id="form" class="topBefore">
+          <input id="name" type="text" placeholder="Name">
+          <input id="email" type="text" placeholder="E-Mail">
+          <textarea id="message" type="text" placeholder="Message"></textarea>
+          <input id="submit" type="submit" value="GO!">
+        </form>
+      </article>
+
+      <footer>
         <div class="social-media">
             <h2 class="footer-logo">LOGO</h2>
             <a href="#" class="fa fa-facebook"></a>
@@ -64,6 +64,5 @@
             <li>Email: hopehacks@gmail.com</li>
         </ul>
     </footer>
-    
-</body> 
+</body>
 </html>
