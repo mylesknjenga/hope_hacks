@@ -1,13 +1,4 @@
 *{
-    margin:0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-   body{
-    font-family: 'Montserrat', sans-serif;
-    background: #f8f8f8;
-  }
-  *{
     margin: 0;
     padding: 0;
     font-family: 'Montserrat', sans-serif;
@@ -73,59 +64,99 @@ nav {
     width: 100%;
  
 }
-  .main{
-    text-align: center;
-    margin: 100px auto;
-  }
-  .input{
-    text-align: center;
-    margin: 100px auto;
-  }
-   input[type="submit"]{
-    padding: 15px 30px;
-    background: #e7e7e7;
-    border: none;
-    border-radius: 1px;
-    font-family: 'Montserrat', sans-serif;
-    font-weight:bold;
-    font-size: 20px;
-  }
-   .input input[type="text"]{
-    width: 600px;
-    height: 55px;
-    padding: 5px 10px;
-    background: #e7e7e7;
-    border: none;
-    border-radius: 1px;
-    font-family: 'Montserrat', sans-serif;
-    font-weight:bold;
-    font-size: 20px;
-  }
-   .card{
-    width: 50%;
-    background: #e7e7e7;
-    height: 40vh;
-    margin: 50px auto;
-    border-radius: 2px;
-  }
-  
-  .close{
-    float: right;
-    margin-top: -2px;
-    cursor: pointer;
-    margin-right: 20px;
-  }
-   .card h1{
-    padding: 5px 0;
-    text-align: center;
-  }
-   .card p{
-    text-align: center;
-    margin:40px 0;
-    font-size:20px;
-  }
 
+article{
+    padding: 1rem;
+    text-align: center;
+}
   
+  input::placeholder, textarea::placeholder {
+    color: #000000;
+    font-size: 0.999em;
+}
+   input:hover:focus::placeholder, textarea:hover:focus::placeholder {
+    color: #ffffff;
+}
+   input:hover::placeholder, textarea:hover::placeholder {
+    color: #000000;
+    font-size: 0.875em;
+}
+   #form {
+    position: relative;
+    width: 500px;
+    margin: 50px auto 100px auto;
+}
+   input {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.875em;
+    width: 470px;
+    height: 50px;
+    padding: 0px 15px 0px 15px;
+   
+    background: transparent;
+    outline: none;
+    color: #000000;
+    border: solid 1px #141413;
+   border-bottom: none;
+  
+   transition: all 0.3s ease-in-out;
+   -webkit-transition: all 0.3s ease-in-out;
+   -moz-transition: all 0.3s ease-in-out;
+   -ms-transition: all 0.3s ease-in-out;
+}
+  input:hover {
+   background: #bababa;
+   color: #000000;
+}
+  textarea {
+   width: 470px;
+   max-width: 470px;
+   height: 110px;
+   max-height: 110px;
+   padding: 15px;
+  
+   background: transparent;
+   outline: none;
+  
+   color: #000000;
+   font-family: 'Montserrat', sans-serif;
+   font-size: 0.875em;
+  
+   border: solid 1px #0b0b0b;
+  
+   transition: all 0.3s ease-in-out;
+   -webkit-transition: all 0.3s ease-in-out;
+   -moz-transition: all 0.3s ease-in-out;
+   -ms-transition: all 0.3s ease-in-out;
+ }
+textarea:hover {
+    background: #bababa;
+    color: #000000;
+}
+#submit {
+    width: 502px;
+   
+    padding: 0;
+    margin: -5px 0px 0px 0px;
+   
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.875em;
+    color: #000000;
+   
+    outline:none;
+    cursor: pointer;
+   
+    border: solid 1px #0a0a09;
+    border-top: none;
+}
+#submit:hover {
+    color: #ffffff;
+}
+p {
+    text-align: center;
+    color: black;
+} 
+
 /* FOOTER */
 footer {
     height: 290px;

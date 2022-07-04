@@ -102,7 +102,6 @@ nav {
 
 /* FOOTER */
 footer {
-    height: 290px;
     background-color: #000;
     color: #fff;
     display: flex;
@@ -165,4 +164,21 @@ footer {
     text-align: center;
     font-size: 20px;
     padding: 20px;
+  }
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 400px) {
+    .header {
+        width: 100%;
+    }
+    .fact-list {
+        width: 95%;
+    }
+    .fact-card a {
+        width: 80%;
+    }
+    .footer {
+        display: flex;
+        flex-direction: column;
+    }
   }
