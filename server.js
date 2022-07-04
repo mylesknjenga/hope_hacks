@@ -3,6 +3,8 @@ const mongoose = require('mongoose');
 const app = express();
 const ejs = require('ejs');
 const bodyParser = require('body-parser');
+const dotenv = require('dotenv')
+
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static(__dirname + '/public'));
@@ -24,10 +26,9 @@ app.get('/', (req, res) => {
 });
 
 app.get('/resources', (req, res) => {
-
     Fact.find({}, (err, facts) => {
         console.log(facts)
-         res.render('resources', {
+         res.render('/views/resources', {
             factList: facts
          })
     })
@@ -35,6 +36,10 @@ app.get('/resources', (req, res) => {
 
 app.get('/weather', (req, res) => {
     res.render('weather')
+});
+
+app.get('/contact', (req, res) => {
+    res.render('contact')
 });
 
 app.get('/admin', (req, res) => {
@@ -88,13 +93,13 @@ app.post('/admin/edit', (req, res) => {
         console.log(err)
     }
     else{
-        console.log("Updated fact : ", docs);
+        console.log('success')
     }
 });
     res.redirect('/admin');
 })
 
-app.listen(4000, () => {
+app.listen(process.env.PORT || 4000, () => {
     console.log('server is running...');
 });
 
