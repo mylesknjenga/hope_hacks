@@ -19,7 +19,14 @@ const factSchema = {
     link: String,
 }
 
+const messageSchema = {
+    name: String,
+    email: String,
+    message: String,
+}
+
 const Fact = mongoose.model('Fact', factSchema);
+const Message = mongoose.model('Message', messageSchema);
 
 app.get('/', (req, res) => {
     res.sendFile(__dirname + '/index.html')
@@ -28,7 +35,7 @@ app.get('/', (req, res) => {
 app.get('/resources', (req, res) => {
     Fact.find({}, (err, facts) => {
         console.log(facts)
-         res.render('/views/resources', {
+         res.render('resources', {
             factList: facts
          })
     })
@@ -97,6 +104,16 @@ app.post('/admin/edit', (req, res) => {
     }
 });
     res.redirect('/admin');
+})
+
+app.post('/send', (req, res) => {
+    let newMessage = new Message({
+        name: req.body.name,
+        email: req.body.email,
+        message: req.body.message
+    })
+    newMessage.save();
+    res.redirect('/contact');
 })
 
 app.listen(process.env.PORT || 4000, () => {
