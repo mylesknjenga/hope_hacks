@@ -12,7 +12,9 @@
 </head>
 <body>
     <section class="header">
-        <div class="logo">LOGO</div>
+        <div class="logo">
+            <img src="/images/CBH-logo.png">
+        </div>
         <nav>
             <ul class="navbar-links">
                 <li class="link">
@@ -36,11 +38,11 @@
 
     <article>
         <h3>Contact Us </h3>
-        <form id="form" class="topBefore">
-          <input id="name" type="text" placeholder="Name">
-          <input id="email" type="text" placeholder="E-Mail">
-          <textarea id="message" type="text" placeholder="Message"></textarea>
-          <input id="submit" type="submit" value="GO!">
+        <form id="form" class="topBefore" action="/send" method="POST">
+          <input name="name" type="text" placeholder="Name">
+          <input name="email" type="text" placeholder="E-Mail">
+          <textarea name="message" type="text" placeholder="Message"></textarea>
+          <input id="submit" type="submit" value="SEND!">
         </form>
       </article>
 
