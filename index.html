@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Welcome | Covered by Hope</title>
     <link href="/css/styles.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
@@ -14,7 +14,7 @@
 <body>
     
     <section class="header">
-        <div class="logo">LOGO</div>
+        <h1 class ="words"><br>STAND UP FOR EQUALITY <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;FOR LGBTQIA+ RIGHTS.</h1>
         <nav>
             <ul class="navbar-links">
                 <li class="link">
@@ -34,33 +34,63 @@
                 </li>
             </ul>
         </nav>
+        
     </section>
     <section class="hero">
-        <!-- <section class="text-box">
-            <section class="background">
-              <section class="transbox">
+        <div class="hero-btn-section">
+            <a href="/resources" class="hero-btn">LEARN MORE</a>
+        </div>
         
-            <h2>Hopehacks</h2>
-            <p>Intro to our topic and our WHY. <br> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi eveniet nulla pariatur molestias quae? Dolorum voluptatibus obcaecati earum optio consequatur placeat quos aut, quis laboriosam totam, aspernatur ipsa eius eligendi.</p>
-            <a href="products.html" class="btn">Browse</a>
-              </section>
-            </section>  
-        </section> -->
+    </section>
+
+    <section class= "mission">
+        <h1>OUR MISSION</h1>
+        <p> Our mission at Covered by Hope specializes in providing the fundamental knowledge and resources to educate people about the modern day oppresion happening to the LGBTQIA+ community. Covered by Hope believes in practicing active support for the LGBTQIA+ community, in which you can practice allyship with the three B's listed below:</p>
+        <section class="row">
+            <section class="course-col">
+                <div class="gradient-border" id="box">
+                <h3>BE AWARE</h3>
+                <p>Awareness is a key factor in allyship. The cliche that awareness is the first step is very true. To make yourself aware is how you can truly begin to support the LGBTQIA+ community. When you take time to truly understand and realize that this is an area in need of support and that your awareness is crucial, only then can you be in a position to actively support the cause.</p>
+            </section>
+        </div>
+            <section class="course-col">
+                <div class="gradient-border" id="box">
+                <h3>BE EDUCATED</h3>
+                <p>Try not to only count on your LBGTQ friends and family to educate you. Begin doing your own research on today’s prevalent issues that the LGBTQ community face in America. Try to gain your own individual understanding of what members of the LBGTQIA+ community go through on a daily basis, without having to make them potentially feel unconfortable explaining it for you. </p>
+            </section>
+        </div>
+            <section class="course-col">
+                <div class="gradient-border" id="box">
+                <h3>BE KIND</h3>
+                <p>Compassion is immensely important when standing with an opressed group. It is easy to assume how others feel, but try to be empathetic towards people who are going through something you might not understand. Just because someone is different, doesn’t make it a bad thing. Show compassion to those who might feel like they have been placed on the outside. </p>
+            </section>
+        </div>
+        </section>
     </section>
     
         <footer>
             <div class="social-media">
-                <h2 class="footer-logo">LOGO</h2>
+                <div class="logo">
+                    <img src="/images/CBH-logo.png">
+                </div>
                 <a href="#" class="fa fa-facebook"></a>
                 <a href="#" class="fa fa-twitter"></a>
                 <a href="#" class="fa fa-youtube"></a>
                 <a href="#" class="fa fa-instagram"></a>
             </div>
             <ul class="footer-menu">
-                <li>HOME</li>
-                <li>PAGE</li>
-                <li>PAGE</li>
-                <li>CONTACT</li>
+                <li>
+                    <a href="/">HOME</a>
+                </li>
+                <li>
+                    <a href="/resources">RESOURCES</a>
+                </li>
+                <li>
+                    <a href="/weather">WEATHER CHECK</a>
+                </li>
+                <li>
+                    <a href="/contact">CONTACT</a>
+                </li>
             </ul>
             <ul class="footer-menu">
                 <li>Address: 4 Privet Drive, Little Whinging, Surrey</li>
@@ -68,17 +98,27 @@
                 <li>Email: hopehacks@gmail.com</li>
             </ul>
         </footer>
-        <div class="credit">Designed by group 10</div>
+        <div class="credit"><span>&copy;</span>Designed by group 10</div>
 
-            <script>
-                var navLinks = document.getElementById('navLinks');
-                function showMenu(){
-                    navLinks.style.right = "0";
-                }
-                function hideMenu(){
-                    navLinks.style.right = "-200px";
-                } 
-                </script>
+        <script>
+            const hamburger = document.querySelector(".hamburger");
+            const navMenu = document.querySelector(".navbar-links");
+
+hamburger.addEventListener("click", mobileMenu);
+
+function mobileMenu() {
+    hamburger.classList.toggle("active");
+    navMenu.classList.toggle("active");
+}
+const navLink = document.querySelectorAll(".link");
+
+navLink.forEach(n => n.addEventListener("click", closeMenu));
+
+function closeMenu() {
+    hamburger.classList.remove("active");
+    navMenu.classList.remove("active");
+}
+            </script>
 
 </body>
 </html>
