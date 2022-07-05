@@ -1,1 +1,2 @@
-# hope_hacks
+# Covered by Hope
+### Hope Hacks
