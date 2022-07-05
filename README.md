@@ -11,18 +11,17 @@ Rename the .envexample to .env and add your MONGO_URI
 
 ```
 npm install
-
 ```
 
 ### Run Server
 
 ```
-npm run server
+node server.js
 ```
 
 ## Demo
 
-I am not sure how long this will be up
+Hosted on Heroku
 
-https://mernappbrad.herokuapp.com/
+https://hopehacks-v1.herokuapp.com/
 
