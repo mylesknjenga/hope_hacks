@@ -1,13 +1,4 @@
 *{
-    margin:0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-   body{
-    font-family: 'Montserrat', sans-serif;
-    background: #f8f8f8;
-  }
-  *{
     margin: 0;
     padding: 0;
     font-family: 'Montserrat', sans-serif;
@@ -26,33 +17,36 @@ a {
     flex-direction: row;
     background-color: #000000;
     color: #ffffff;
-    padding: 20px 50px;
+    padding: 0.313rem 3.125rem;
 }
 
 .logo {
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 2px solid #ffffff;
-    font-size: 20px;
+}
+
+.logo img {
+    height: 5.625rem;
 }
 
 nav {
     width: 100%;
     display: flex;
     justify-content: flex-end;
-    font-size: 20px;
+    font-size: 1.125rem;
 }
 
 .navbar-links {
     display: flex;
     flex-direction: row;
-    padding: 8px 12px;
+    padding: 0.5rem 0.75rem;
+    align-items: center;
+    justify-content: center;
 }
 
 .link {
-    padding: 8px 12px;
-    position: relative;
+    padding: 0.5rem 0.75rem;
 }
 
 .link a {
@@ -73,9 +67,20 @@ nav {
     width: 100%;
  
 }
+
   .main{
     text-align: center;
     margin: 100px auto;
+  }
+  .main-header h1 {
+      margin-left: 35px;
+      margin-bottom: 10px;
+      font-family: sans-serif;
+      font-size: 4rem;
+      background: linear-gradient(to right, #EB312E, #F26A97, #6934C4, #128DF1, #26C6DA, #2DA533, #DFEF2E, #F49C0E, #F74813);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
   }
   .input{
     text-align: center;
@@ -89,6 +94,10 @@ nav {
     font-family: 'Montserrat', sans-serif;
     font-weight:bold;
     font-size: 20px;
+  }
+  input[type="submit"]:hover{
+    background: #bababa;
+   color: #000000;
   }
    .input input[type="text"]{
     width: 600px;
