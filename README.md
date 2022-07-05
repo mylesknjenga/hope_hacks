@@ -1,7 +1,7 @@
 # Covered by Hope
 ### Hope Hacks
 
-This is the goalsetter app from the [Learn the MERN Stack](https://www.youtube.com/watch?v=-0exw-9YJBo) series on YouTube.
+Covered by Hope is a website dedicated to blah blah blah.....
 
 ## Usage
 
