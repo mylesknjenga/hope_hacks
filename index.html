@@ -33,6 +33,11 @@
                     <a href="/admin">ADMIN</a>
                 </li>
             </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
         </nav>
         
     </section>
@@ -68,57 +73,41 @@
         </section>
     </section>
     
-        <footer>
-            <div class="social-media">
-                <div class="logo">
-                    <img src="/images/CBH-logo.png">
-                </div>
-                <a href="#" class="fa fa-facebook"></a>
-                <a href="#" class="fa fa-twitter"></a>
-                <a href="#" class="fa fa-youtube"></a>
-                <a href="#" class="fa fa-instagram"></a>
+    <footer>
+        <div class="social-media">
+            <div class="logo">
+                <img src="/images/CBH-logo.png">
             </div>
-            <ul class="footer-menu">
-                <li>
-                    <a href="/">HOME</a>
-                </li>
-                <li>
-                    <a href="/resources">RESOURCES</a>
-                </li>
-                <li>
-                    <a href="/weather">WEATHER CHECK</a>
-                </li>
-                <li>
-                    <a href="/contact">CONTACT</a>
-                </li>
-            </ul>
-            <ul class="footer-menu">
-                <li>Address: 4 Privet Drive, Little Whinging, Surrey</li>
-                <li>Phone: +1(203)789-1899</li>
-                <li>Email: hopehacks@gmail.com</li>
-            </ul>
-        </footer>
+            <a href="#" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-twitter"></a>
+            <a href="#" class="fa fa-youtube"></a>
+            <a href="#" class="fa fa-instagram"></a>
+        </div>
+        <ul class="footer-menu">
+            <li>
+                <a href="/">HOME</a>
+            </li>
+            <li>
+                <a href="/resources">RESOURCES</a>
+            </li>
+            <li>
+                <a href="/weather">WEATHER CHECK</a>
+            </li>
+            <li>
+                <a href="/contact">CONTACT</a>
+            </li>
+        </ul>
+       
+        <ul class="footer-menu">
+            <li>Address: 4 Privet Drive, Little Whinging, Surrey</li>
+            <li>Phone: +1(203)789-1899</li>
+            <li>Email: hopehacks@ gmail.com</li>
+        </ul>
+    </footer>
+
         <div class="credit"><span>&copy;</span>Designed by group 10</div>
 
-        <script>
-            const hamburger = document.querySelector(".hamburger");
-            const navMenu = document.querySelector(".navbar-links");
-
-hamburger.addEventListener("click", mobileMenu);
-
-function mobileMenu() {
-    hamburger.classList.toggle("active");
-    navMenu.classList.toggle("active");
-}
-const navLink = document.querySelectorAll(".link");
-
-navLink.forEach(n => n.addEventListener("click", closeMenu));
-
-function closeMenu() {
-    hamburger.classList.remove("active");
-    navMenu.classList.remove("active");
-}
-            </script>
+        <script src="/js/app.js"></script>
 
 </body>
 </html>
