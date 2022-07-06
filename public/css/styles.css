@@ -2,17 +2,30 @@
     margin: 0;
     padding: 0;
     font-family: 'Montserrat', sans-serif;
-}
-
-ul {
+    @media screen and (max-width:1200px) and (min-width :480px)
+ }
+  
+ ul {
     list-style: none;
-}
+    flex-wrap: wrap;
+    @media (max-width:1024px){
+        display:block;
+  
+    }
+ }
+ 
 
 a {
     text-decoration: none;
     color: #ffffff;
 }
-
+.row{
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+ }
+ 
 .header {
     display: flex;
     flex-direction: row;
@@ -80,6 +93,10 @@ nav {
  
 }
 
+.hamburger {
+    display: none;
+}
+
 .hero {
     min-height: 100vh;
     width: 100%;
@@ -122,16 +139,18 @@ nav {
     font-weight: 400;
  }
 
-.mission h1 {
+ .mission h1 {
     margin-top: 0px;
+    margin-right: 10px;
     margin-bottom: 10px;
     font-family: sans-serif;
-    font-size: 6rem;
+    font-size: 4rem;
     background: linear-gradient(to right, #EB312E, #F26A97, #6934C4, #128DF1, #26C6DA, #2DA533, #DFEF2E, #F49C0E, #F74813);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
   }
+ 
 
  .mission p{
     font-weight: 500;
@@ -183,7 +202,18 @@ footer {
     background-color: #000;
     color: #fff;
     display: flex;
-}
+    flex-wrap: wrap;
+  
+ }
+
+ .footer-menu {
+    font-size: 20px;
+    padding: 50px 30px;
+    width: 28%;
+    flex-wrap: wrap;
+  
+  }
+ 
 
 .footer-logo {
     font-size: 50px;
@@ -228,15 +258,12 @@ footer {
     color: white;
   }
 
-  .footer-menu {
-    font-size: 20px;
-    padding: 50px 30px;
-    width: 28%;
-  }
   .footer-menu li {
-    padding-top: 10px;
+    padding: 10px;
     text-align: center;
-}
+    flex-wrap: wrap;
+ }
+ 
   .credit {
     background-color: #fff;
     text-align: center;
@@ -259,4 +286,49 @@ footer {
      text-align: center;
      font-weight: 600;
      margin: 10px 0;
+ }
+
+ @media only screen and (max-width: 768px) {
+    .header {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .words {
+        font-size: 20px;
+        width: 100%;
+      }
+    
+    .course-col{
+        flex-basis: 100%;
+        padding: 20px 12px;
+    }
+
+    .navbar-links {
+        position: fixed;
+        left: -100%;
+        top: 5rem;
+        flex-direction: column;
+        background-color: #fff;
+        width: 100%;
+        border-radius: 10px;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow:
+            0 10px 27px rgba(0, 0, 0, 0.05);
+    }
+
+    .navbar-links.active {
+        left: 0;
+    }
+
+    .link{
+        margin: 2.5rem 0;
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+        margin-top: 30px;
+    }
  }

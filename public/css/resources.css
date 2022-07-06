@@ -2,14 +2,23 @@
     margin: 0;
     padding: 0;
     font-family: 'Montserrat', sans-serif;
-}
+    @media screen and (max-width:1200px) and (min-width :480px)
+ }
+ 
 
-ul {
+ ul {
     list-style: none;
-}
+    flex-wrap: wrap;
+    @media (max-width:1024px){
+        display:block;
+  
+    }
+ }
+ 
 
 a {
     text-decoration: none;
+    color: #fff;
 }
 
 .header {
@@ -257,6 +266,17 @@ footer {
     .hamburger {
         display: block;
         cursor: pointer;
+        margin-top: 30px;
+    }
+
+    .fact-list {
+    width: 95%;
+    }
+    .fact-list h1 {
+        font-size: 3rem;
+      }
+      .fact-card a {
+        width: 90%;
     }
 
 }

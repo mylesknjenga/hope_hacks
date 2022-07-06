@@ -23,3 +23,23 @@ fetch('https://api.openweathermap.org/data/2.5/weather?q='+input.value+'&appid=5
  
 .catch(err => alert("Wrong City/State name!"));
 })
+
+//Navigation bar
+const hamburger = document.querySelector(".hamburger");
+const navMenu = document.querySelector(".navbar-links");
+ 
+hamburger.addEventListener("click", mobileMenu);
+ 
+function mobileMenu() {
+hamburger.classList.toggle("active");
+navMenu.classList.toggle("active");
+}
+const navLink = document.querySelectorAll(".link");
+ 
+navLink.forEach(n => n.addEventListener("click", closeMenu));
+ 
+function closeMenu() {
+hamburger.classList.remove("active");
+navMenu.classList.remove("active");
+}
+
