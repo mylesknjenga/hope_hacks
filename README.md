@@ -3,6 +3,17 @@
 
 Covered by Hope is a website dedicated to educate people about the ongoing discrimination that the LGBTQIA+ community is subjected to by providing them with pertinent information and materials.
 
+## Technologies
+
+This project is created with:
+* HTML
+* CSS
+* JAVASCRIPT
+* EJS
+* NODEJS
+* MONGODB
+
+
 ## Usage
 
 ### Install dependencies
