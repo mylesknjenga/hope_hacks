@@ -5,8 +5,6 @@ Covered by Hope is a website dedicated to educate people about the ongoing discr
 
 ## Usage
 
-Rename the .envexample to .env and add your MONGO_URI
-
 ### Install dependencies
 
 ```
